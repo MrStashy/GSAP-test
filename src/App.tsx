@@ -16,8 +16,16 @@ function App() {
         duration: 2,
         ease: "linear",
       });
+
+      gsap.to("button", {
+        backgroundColor: "red"
+      })
     } else {
       gsap.killTweensOf(".text"); 
+
+      gsap.to("button", {
+        backgroundColor: "green"
+      })
     }
   }, [animate]);
 
